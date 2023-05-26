@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Free Document converter online</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato|Raleway|Source+Sans+Pro" rel="stylesheet">
+  <style type="text/css">
+
+ 
+  body {
+font-family: 'Source Sans Pro', sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  background-color: white;
+  overflow-x: hidden;
+}
+    
+ .navbar-inverse .navbar-nav>li>a:hover
+{
+    background-color:rgb(235, 137, 26);
+    color:#000;
+
+}
+
+
+.active
+{
+
+  border-bottom:1px solid rgb(235, 137, 26) ;
+  
+}
+
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width:130px;
+    height: 138px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+.services-nav-item-icon {
+    width: 42px;
+    height: 42px;
+    margin-left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.box__dragndrop,
+.box__uploading,
+.box__success,
+.box__error {
+  display: none;
+}
+
+.files input {
+    outline: 2px dashed #639195;
+    outline-offset: -10px;
+    -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    padding: 120px 0px 85px 35%;
+    text-align: center !important;
+    margin: 0;
+    width: 100% !important;
+}
+.files input:focus{     outline: 2px dashed #cbe4e7;  outline-offset: -10px;
+    -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear; border:1px solid #92b0b3;
+ }
+.files{ position:relative}
+.files:after {  pointer-events: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 50px;
+    right: 0;
+    height: 56px;
+    content: "";
+    background-image: url(https://image.flaticon.com/icons/png/128/109/109612.png);
+    display: block;
+    margin: 0 auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.color input{ background-color:#ffffff;}
+.files:before {
+    position: absolute;
+    bottom: 10px;
+    left: 0;  pointer-events: none;
+    width: 100%;
+    right: 0;
+    height: 57px;
+    content: " or drag it here. ";
+    display: block;
+    margin: 0 auto;
+    color: #2ba591;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #2d2c2c;
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+
+ul {
+  overflow: auto;
+}
+
+ul li {
+  list-style-type: none;
+  float: right;
+}
+
+ul li a i {
+  background: #205D7A;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  font-size: 15px;
+  text-align: center;
+  margin-right: 10px;
+  padding-top: 15%;
+}
+.img-responsive{
+  width: 100px;
+  height: 75px;
+}
+
+.icon-img{
+  width: 150px;
+  height: 150px;
+}
+.text-cap{
+  color: white;
+  
+}
+
+
+  </style>
+
+</head>
+<body>
+ <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color:brown;height:83px;border-bottom:1px solid rgb(249, 249, 249);">
+      <!--
+    <div class="alert alert-dismissible alert-info">
+  <button type="button" class="close" data-dismiss="alert">×</button>
+  <strong>Merry Christmas Wishes From Eray technology and Solutons !</strong> .
+</div>-->
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header" style="padding-top:1px;">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.php" style="padding-top:0px;">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1" style="padding-top:15px;background-color:brown;">
+                <ul class="nav navbar-nav">
+                    
+                    <li>
+                     <a href="#" class="btn btn-info" role="button" style="background-color:inherit;color:white;border: 2px solid white ;">Register</a>
+                    </li>   
+
+                    <li>
+                    	&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    </li>
+
+                     <li>
+                     <a href="#" class="btn btn-info" role="button" style="background-color:inherit;color:white;border: 2px solid white">Login</a>
+                    </li>   
+					
+					
+                   
+					
+					<!--<li class="dropdown">
+                        <a href="projects.php?opt=cpro" style="color:#000;"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">PROJECTS <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                         
+                          <li class="divider"></li>
+                          <li ><a href="projects.php?opt=cpro">CURRENT PROJECTS</a></li>
+                          <li class="divider"></li>
+                          <li><a href="projects.php?opt=compro"> COMPLETED PROJECTS</a></li>
+                        </ul>
+                      </li>-->
+
+				
+
+
+
+                             <li >
+                  
+                    </li>
+                </ul>
+      </div>
+     
+
+            <!-- /.navbar-collapse -->
+        </div>
+
+        <!-- /.container 
+
+           -->
+  
+    </nav>	
+    
+   <div class="container-fluid" style="background-color:black;" >
+   
+    <div class="container" >
+    	<br><br><br><br><br><br><br>
+
+
+    	<div class="row">
+
+    		<div class="col-lg-2 col-xs-7">
+    			<div class="card">
+    			<a href="word-to-pdf.htm">	  	
+  <img class="icon-img" src="data:image/jpeg;base64,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" alt="Avatar" style="width:10x10">
+</a>
+  <div class="container">
+<p class="text-cap">WORD-PDF</p>
+
+  
+  </div>
+</div>
+    		</div>
+
+    		  		<div class="col-lg-2 col-xs-6">
+    			<div class="card">
+    				  	
+   	<a href="pdf-doc-converter.html"> <img class="icon-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT82BbghLH4iUbuJF_JsLqic2t39A7_Kch8dw&usqp=CAU" alt="Avatar" style="width:20x20">
+    </a>
+  <div class="container">
+    <p class="text-cap">PDF-WORD</p>
+
+  
+  </div>
+</div>
+    		</div>
+
+
+    		  		<div class="col-lg-2 col-xs-6">
+    			<div class="card">
+    				  	
+   	<a href="pdf-html-converter.html">  
+      <img class="icon-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVkAAACSCAMAAADYdEkqAAAA81BMVEX////p6eDMS0zsZjAALjwFOERwf4XDycvZ18rsYijp6+L8/PsAAADsZy3LRUbq8Of19fHfs63wkXPaiIjrWRP30MPNTk/rXh/JPT7f39/0var36Of14eH86uTf3dLj49ienp7JNjfwh2TPVlf98/DekJH0qpHynH7nrKzy1NT74NbtxMTSYWIYP0rscD/VbW7erajp2cvl08zqxLHqublXa3LUfXrqr5bUdnTkz8isrKy4uLjZlZHUaGnswMDFJynqUwDhwrvboZ3se0/sd0rroIOVlZUcHBzq1cZqa2t7e3tWVlY5OTnin5/vgl3wjm33xbXz1TWDAAAIj0lEQVR4nO3dfX/athYHcNlubmOZyCUQrI6ntiYhITShJKOwC21Ct+7ubrR9/69mkk0ID7LBNrLEp+f3F2B3Nt8qx8eSl6L3RxAZeY+Ofv0PZP/59Qi9eIkg+8/LFyArJyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKz+HrJMsezlmBlkFZ5syr4xkae7jbNPLJj3dV3s423RxEp6p0Wjs4ajpZROebfNYGW3SMWA0jvdAm1o26UBoHiujTSF73MhcEPKUVUWbRjY7ba6yimhTyWamzVdWDW062ay0OcsqoU0pe3yciTZvWRW0qWUz0eYuq4A2vWwWWmmyrutioWz+tBlkM9BKksX4cdozlmmfZXOnzSKbnlaSrDsllI7xEu2SbN60mWRT08qRxaMKISYtumLZnGmzyaallSPrFikpmaQUJZsvbUbZlLSSxuyUThoTOoiUzZU2q2w6Wkljtvd24A5o9JjNlTazbCpaadXg1pjQcYxsjrTZZdPQSpJlV7CpSaZxsvnRJpZtNjaS/KiS6iwest6APK40tOsx0hw2TRLLCpJ80MrqZ3vENEkDx+6U19rYPmST/4DJugdrMNguBtkU2SJrDAgpxcOCrDhbZmT4vcJya6ClrOBvPmow6COLe9Ss9PWuBri5Ua4EH2kmi40h6w0G8YVWsaz70fvSXD1B/NH71hSesz6yHxgsa7ti64FaWfdj2SrfrTK6N7b9u5BWG1nedQ0r5DaybimX5bD2jbE+ZtmHQlp9ZFlr0CwR0osbtCplQ9gNQ/dC4K2TLO77ZOj2K8SPu4gplI2AjRjKGsm6RUJ72O3R2IuYOtlI2EhaXWTxOWUtF28QWFMbSatMNgY2aqMmsrjBigH7a3dZUSDFyFKrSjYWNmKzJrKsMwhnEN1HQiojF2OXL5KvfxVFsqyPjYOd0651CHrI8jnE+f2XOyXktv9hVOxNe4/rU19qZPE2WCGtHrLuYyWYjWEj1Rh12aitmITF9IurX0eJLP5Qtizx3cAyrW157eUypocsHlN294XdZnE89E12L8bCZYm/OmoVyXqWdfNhi2ybyf6hnSy/ft0ajcdBhXFS6neZ6Xm/0R+wkqte1sB3nnVyEkeL3bZnee8M7aoBv34Nx13KXbul4qhfosQ8L4590jU0kDVcTmtH085hsXZXMOze8pUaQivDaZ+9wxj3TM680YAp67ruWKmNpBXCaiCL3f45L6t0Mh0tGi13NOBlYb2zzSJb+Lr7vpt3CjG02D3lsOv3N6plmeu4wspqtzQyls/Nxf3HkbHe0GaR/Voo/LbrvoK724D2f6I1BTGsaln2c+9TNmAHjfXbAsyzvnumavBnoVDY8cRFMzIRtHPYzXNVK4vZ5Z+3WOyuS8C+mV1kX72OCBu0hcJfr3c5VeEsIqM9OdmgxRz2u2AWSamsO/IJ8Qcm3baymET2ZSE+f+3wlcUz30HztXZb6P4RAatUFvfZ7dZwNIyfk923bOG/2/8bEas1d54tWK0Rw6qUxcaAkjHu0fh1hKSyr7++ESeoBoX/71RRxId3725O17/E3U1bPKGsUrbPn0R+rJBJ7NpXUtnI/M1c/97tzCNXxd2NMYDdiOlklbIjSoq8IMSv1+5L9nWh8OcOhSDIgT8jw8es75OVJzslyv6zS4Gd58Bl+RP07JY2ZnFmn7LObwm+6sHL4t6k29vy+OG+ZBPl0GWD/21x91IAslFJ/MtZNgOywoDsloDsbgFZUUBWVkBWVg5N1s0ckBWmVcycVprjpsgrnD05ytZIuB6bOpRU0xw3RX7xTrKmfJb4qOllzayp5CdrZQ3ICrMHWQ9kRTlsWUJZgpVbluA1Jasbgw9BdntWZck5z5A/bcDIgjelYYXON5bO5xmok7XLZXuuVObvy0sJ3y4Yy+XVP6BU9m3QQTnVywobln64h1ObhYOYLghrFVWy9vd6/dQOkepnnmW36s85sbxOvbMY2Z1gh2+tetvWQLaKqvf31w665rIOqt1/umJwVxMSyrKNPDN1sqcIhVDlOqqXLRuFv3w8+B3kTLb1tNnyLlCwwzuELjwtZD99pmTQQjPKZS8/04o/c8JBymSvPoeFVlk1WJe1WJPqsc9Oea9rBbKdsB54dd1krxkbvUdXJJDlj3fRAXtBQtkVUx1krfCz0/lA5dXsC39tf0days5QzSdzWfb2GrV8jWXbq7JnwaWsg7SUZWPWNJ9lzxEakqVqoK7r2i7LigArC/YX5LQ0k/30llK/iu7psywZOrzuPl/BJkSl7OkDb7EeOmLZzhnf0fuBftQ1k70alMY1VK2YItkwzlCpbCuMEyH7Djnsc1ZudZMNErRZK9VgEFSDWveWx1daDeayKEL2oYXa5QtUf9BNtnp5eX4b3Bo8y14iNAnr7Ntg5lDxFazssTxE1NnOwy9MtYUutJNl/ez8CrWQNa+C6nAYvQFrZ9muyHm6ldBH9nqB9yTLi8FM5352TTaYhP1R9vSWZT/95qzFu9vDkQ1uEr7ZestWr69r7FJRe5o3OAhZtsnpeNayrB1EI9lgVdapzfynua7DkLXYBc5aknXCZuLMUznz3e36y294/EUzsLJRZ9nw9UJ2HrZF5WrNSke13mIRU5B8Z75PgjktK3xlLV4tvXyqqU+vn1du860GVRFWssBqjTDOMOvzBsO8npH5cVir4qg6K2XKLK8hy+6s7IzxvOTP8/wU/95tp32aLe168oP+FLJKArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKyArKywmSP3ryE7D9vjtD7oxeQ/efo/b/qUnW6dAJIWQAAAABJRU5ErkJggg==" alt="Avatar" style="width:20x20">
+    </a>
+  <div class="container">
+
+    <p class="text-cap">PDF-HTML</p>
+  
+  </div>
+</div>
+    		</div>  		<div class="col-lg-2 col-xs-6">
+    			<div class="card">
+    				  	
+   	<a href="pdf-rtf-converter.html">	  	
+  <img class="icon-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeol7DpikjbzH191R5DSmSfULN8EpjUR_N3Q&usqp=CAU" alt="Avatar" style="width:20x20"></a>
+  <div class="container">
+    <p class="text-cap">PDF-RTF</p>
+
+  
+  </div>
+</div>
+    		</div>  		<div class="col-lg-2 col-xs-6">
+    			<div class="card">
+    				  	
+   	<a href="pdf-jpg-converter.html">	  	
+  <img class="icon-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8qWNcRzvtVty1a9liTeoFVJfUb0WT4cC47g&usqp=CAU" alt="Avatar" style="width:20x20"></a>
+  <div class="container">
+
+    <p class="text-cap">PDF-JPG</p>
+  
+  </div>
+</div>
+    		</div>  		<div class="col-lg-2 col-xs-6">
+    			<div class="card">
+    				  	
+   	<a href="pdf-png-converter.html">	  	
+  <img class="icon-img" src="data:image/png;base64,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" alt="Avatar" style="width:20x20"></a>
+  <div class="container">
+
+    <p class="text-cap">PDF-PNG</p>
+  
+  </div>
+</div>
+    		</div>  
+
+
+    		</div>
+<br><br>
+
+
+<br><br>
+
+
+    	
+    
+
+
+<br><br><br>
+
+    </div>
+    </div>
+
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <br>   <br>
+        <center><img src="img/bulb.svg?h=8e8f4997" alt=""><br>
+       <b>How to compress a PDF</b>
+
+ <br> </center>
+<p >Just drag-and-drop your PDF file in the box above, wait for the compression to complete and download your file. It's that simple.</p>
+      </div>
+        <div class="col-lg-4"><br>   <br>
+ <center>
+  <img src="img/lock.svg?h=c0ed051c" alt=""><br>
+       <b> Security guaranteed</b> <br></center>
+
+<p>Your files will be permanently deleted from our server after one hour. No one has access to your files and privacy is 100% guaranteed.</p>
+      </div>
+        <div class="col-lg-4">   <br>   <br>
+ <center>
+      
+       <img src="img/thumb.svg?h=4e815732" alt=""> <br>
+       <b>Easy to use.</b> </center>
+
+<p>Drag and drop your file, wait a few seconds while it shrinks, and download it with a single click. The process is quick and secure.</p>
+      </div>
+    </div>
+   <br>   <br> 
+<hr>
+     <div class="row">
+      <div class="col-lg-4">
+        <br>
+       <b>Convert from PDF</b>
+ <br> <br>
+<a href="word-to-pdf.htm" style="color:#000;    font-weight: 600;
+    font-size: 14px;
+    line-height: 30px;font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-stretch: normal; "> WORD TO PDF </a><br>
+<a href="pdf-to-html.htm" style="color:#000;    font-weight: 600;
+    font-size: 14px;
+    line-height: 30px;font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-stretch: normal; "> PDF to HTML </a>
+    <br>
+<a href="pdf-to-rtf.htm" style="color:#000;    font-weight: 600;
+    font-size: 14px;
+    line-height: 30px;font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-stretch: normal; "> PDF to RTF </a>
+
+     <br>
+<a href="pdf-to-jpg.htm" style="color:#000;    font-weight: 600;
+    font-size: 14px;
+    line-height: 30px;font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-stretch: normal; "> PDF to JPG </a>
+
+     <br>
+<a href="pdf-to-png.htm" style="color:#000;    font-weight: 600;
+    font-size: 14px;
+    line-height: 30px;font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-stretch: normal; "> PDF to PNG </a>
+      </div>
+      
+    </div>
+
+       <br>   <br> 
+  </div>
+</div>
+
+
+<div class="container-fluid" style="background-color:#e6e6e6;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+      
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h6 style="text-align: right;"><b>&nbsp;&nbsp;&nbsp;About &nbsp;&nbsp;&nbsp; Help  &nbsp;&nbsp;&nbsp;Privacy and Terms</b></h6></div></div></div></div>
+
+
+
+<div class="container-fluid" >
+  <div class="container">
+    <div class="row">
+
+
+
+        <div class="col-lg-12"> 
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+ 
+     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+
+
+
+
+</body>
+     
+</html>
